@@ -1,0 +1,6 @@
+name: GenControl
+version: ${project.version}
+main: eu.endermite.gencontrol.GenControl
+api-version: 1.16
+authors: [ YouHaveTrouble ]
+website: youhavetrouble.me
