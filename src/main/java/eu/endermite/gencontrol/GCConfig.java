@@ -16,9 +16,9 @@ public class GCConfig {
         ConfigurationSection disabled_structures = plugin.getConfig().getConfigurationSection("disabled-structures");
         for (String key : disabled_structures.getKeys(false)) {
             StructureType structureType = StructureType.getStructureTypes().get(key);
-            if (structureType == null)
-                continue;
-            disabledStructures.add(structureType);
+            if (structureType == null) continue;
+            if (disabled_structures.getBoolean(key))
+                disabledStructures.add(structureType);
         }
     }
 
